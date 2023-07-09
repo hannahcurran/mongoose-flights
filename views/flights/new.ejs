@@ -4,18 +4,19 @@
     <h2>Add New Flight</h2>
     <form action="/flights" method="POST">
         <label>Airline
-            <select name="airline">
-                <option value="American">America</option>
+            <select name="airline" value="">
+                <option value=""></option>
+                <option value="American">American</option>
                 <option value="Southwest">Southwest</option>
                 <option value="United">United</option>
             </select>
         </label><br>
 
         <label>Airport
-            <select name="airport" value="LAX">
-                <option value="AUS">AUS</option> 
-                <option value="DFW">DFW</option> 
+            <select name="airport" value="">
                 <option value="DEN">DEN</option>
+                <option value="AUS">AUS</option>
+                <option value="DFW">DFW</option>
                 <option value="LAX">LAX</option>
                 <option value="SAN">SAN</option>
             </select>
@@ -29,7 +30,7 @@
         <label>Departs
             <input type="datetime-local" name="departs" value="2024-07-09T16:30" min="2023-07-09T16:30" max="">
         </label><br>
-
+        <button type="submit">Add Flight</button>
     </form>
     <p>
         <%= errorMsg %>
